@@ -10,4 +10,6 @@ Features
 
 * Using React-Router 4
 
-* Using babel for transpiling
+* Using babel for transpiling to es2015
+
+* Typescript support

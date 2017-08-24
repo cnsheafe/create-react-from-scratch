@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    entry: "./app/index.jsx",
+    entry: "./app/index.tsx",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
@@ -20,6 +20,23 @@ module.exports = {
                         "react"
                     ]
                 }
+            },
+            {
+                test: /\.tsx?$/,
+                include: [
+                    path.resolve(__dirname, "app")
+                ],
+                loader: "awesome-typescript-loader",
+                options: {
+                    useBabel: true,
+                    babelOptions: {
+                        presets: [
+                            "es2015",
+                            "react"
+                        ]
+                    },
+                    useCache: true
+                }
             }
         ]
     },
@@ -28,7 +45,7 @@ module.exports = {
             "node_modules",
             path.resolve(__dirname, "app")
         ],
-        extensions: [".js", ".jsx", ".json"]
+        extensions: [".js", ".jsx", ".json", ".ts", ".tsx"]
     },
     devtool: "source-map",
     devServer: {
