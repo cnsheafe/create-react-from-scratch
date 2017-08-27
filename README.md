@@ -1,5 +1,7 @@
-Example code to configure webpack for a react project
+React From Scratch
 =
+
+Super simple example code for setting up a React app with Webpack.
 
 Features
 -
