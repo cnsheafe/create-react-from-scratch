@@ -1,4 +1,4 @@
 node_modules
 .awcache
-dist/bundle.js
-dist/bundle.js.map
+app/dist/bundle.js
+app/dist/bundle.js.map
